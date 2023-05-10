@@ -2,7 +2,7 @@
 
 This is an optional add-on for ModComponent enabling the Alcohol Mechanics.
 
-This is a up-to-date fork of [ds5678's CraftingHotkey](https://github.com/ds5678/AlcoholMod).
+This is a up-to-date fork of [ds5678's AlcoholMod](https://github.com/ds5678/AlcoholMod).
 
 ## Installation
 
