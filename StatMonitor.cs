@@ -2,7 +2,7 @@
 
 namespace AlcoholMod
 {
-	internal class StatMonitor
+	public class StatMonitor
 	{
 		public bool debug;
 		public float hourlyBaseline;
@@ -14,7 +14,7 @@ namespace AlcoholMod
 		public float GetRateOfChange()
 		{
 			float result;
-			if (ModComponent.Utils.ModUtils.AlmostZero(hourlyChange)) result = 0;
+			if (Math.Abs(hourlyChange) < 0.01f) result = 0;
 			else if (hourlyBaseline > 0)
 			{
 				result = Mathf.Min(hourlyChange / hourlyBaseline, 1) + Mathf.Max(0, hourlyChange - hourlyBaseline) * scale;
