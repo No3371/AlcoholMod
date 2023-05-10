@@ -1,6 +1,6 @@
 ﻿namespace AlcoholMod
 {
-	public struct AlcoholUptake
+	public class AlcoholUptake
 	{
 		public float amountPerGameSecond;
 
