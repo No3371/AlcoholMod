@@ -14,15 +14,15 @@ namespace AlcoholMod
 		[HarmonyPatch(typeof(GearItem), nameof(GearItem.ApplyBuffs))]
 		internal static class AlcoholComponentHook
 		{
-			public static void Postfix(GearItem __instance, float consumedTotalPercentage)
+			public static void Postfix(GearItem __instance, float normalizedValue)
 			{
 				if (AlcoholMod.Instance?.HealthManager == null) return;
 				ModFoodComponent modFood = __instance.GetComponent<ModFoodComponent>();
 				if (modFood != null)
 				{
-					var alcoholInFood = modFood.WeightKG * modFood.AlcoholPercentage * 0.01f;
-					float alcoholConsumed = alcoholInFood * consumedTotalPercentage;
-					AlcoholMod.Instance.HealthManager.DrankAlcohol(alcoholConsumed, modFood.AlcoholUptakeMinutes * 60);
+					var amountTotal = modFood.WeightKG * modFood.AlcoholPercentage * 0.01f;
+					float amountConsumed = amountTotal * normalizedValue;
+					AlcoholMod.Instance.HealthManager.DrankAlcohol(amountConsumed, modFood.AlcoholUptakeMinutes * 60);
 				}
 			}
 		}
