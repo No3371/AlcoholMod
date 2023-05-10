@@ -2,6 +2,8 @@
 
 This is an optional add-on for ModComponent enabling the Alcohol Mechanics.
 
+![](https://imgur.com/q9nD4Vh.gif)
+
 This is a up-to-date fork of [ds5678's AlcoholMod](https://github.com/ds5678/AlcoholMod).
 
 ## Installation
