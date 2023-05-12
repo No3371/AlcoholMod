@@ -2,7 +2,7 @@
 
 This is an optional add-on for ModComponent enabling the Alcohol Mechanics.
 
-![](https://imgur.com/q9nD4Vh.gif)
+![](https://imgur.com/q9nD4Vh.gif)  
 *(Note: this is caused by a morphine syringe, you shouldn't really do anything other than sleep if you take one)*
 
 This is a up-to-date fork of [ds5678's AlcoholMod](https://github.com/ds5678/AlcoholMod).
