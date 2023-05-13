@@ -18,7 +18,7 @@ namespace AlcoholMod
 			{
 				if (AlcoholMod.Instance?.HealthManager == null) return;
 				ModFoodComponent modFood = __instance.GetComponent<ModFoodComponent>();
-				if (modFood != null)
+				if (modFood != null && modFood.ContainsAlcohol)
 				{
 					var amountTotal = modFood.WeightKG * modFood.AlcoholPercentage * 0.01f;
 					float amountConsumed = amountTotal * normalizedValue;
